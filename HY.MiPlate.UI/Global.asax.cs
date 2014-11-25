@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
 using StructureMap;
 
@@ -17,21 +18,10 @@ namespace HY.MiPlate.UI
         {
             AreaRegistration.RegisterAllAreas();
             HY.MiPlate.Routes.DefaultRoute.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             var container = IocResolver.Configure();
             ControllerBuilder.Current.SetControllerFactory(new IocControllerFactory(container));
             //GlobalConfiguration.Configuration.ServiceResolver.SetResolver(new StructureMapDependencyResolver(container));
-        }
-
-        public static IContainer ConfigureDependencies()
-        {
-            IContainer container = new Container();
-
-            container.Configure(x => x.Scan(scan =>
-            {
-                scan.Assembly("HY.MiPlate.UI.Repository");
-                scan.Assembly("HY.MiPlate.UI.Domain");
-            }));
-            return container;
         }
     }
 }
