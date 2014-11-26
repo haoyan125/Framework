@@ -9,6 +9,9 @@ using System.Xml;
 using JsonResult = HY.MiPlate.UI.Shared.MVC.JsonResult;
 namespace HY.MiPlate.UI.Controllers.Metadata
 {
+  /// <summary>
+  /// 
+  /// </summary>
    public class MiPlateControllerBase : Controller
     {
        protected string RenderPartialViewToString(string viewName, object model)
