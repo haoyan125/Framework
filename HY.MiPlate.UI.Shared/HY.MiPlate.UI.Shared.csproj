@@ -75,10 +75,15 @@
     <Compile Include="Constants\ContentTypes.cs" />
     <Compile Include="MVC\JsonResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThirdPartyConnector\IAuthorization.cs" />
+    <Compile Include="ThirdPartyConnector\WeixinAuthorization.cs" />
+    <Compile Include="ThirdPartyConnector\WeixinSignature.cs" />
+    <Compile Include="ThirdPartyConnector\WeixinToken.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
