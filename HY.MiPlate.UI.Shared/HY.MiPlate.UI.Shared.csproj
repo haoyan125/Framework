@@ -76,6 +76,7 @@
     <Compile Include="MVC\JsonResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThirdPartyConnector\IAuthorization.cs" />
+    <Compile Include="ThirdPartyConnector\Messages.cs" />
     <Compile Include="ThirdPartyConnector\WeixinAuthorization.cs" />
     <Compile Include="ThirdPartyConnector\WeixinSignature.cs" />
     <Compile Include="ThirdPartyConnector\WeixinToken.cs" />
